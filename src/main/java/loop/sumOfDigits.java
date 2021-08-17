@@ -1,6 +1,6 @@
 package loop;
 import java.util.Scanner;
-
+//program to sum of digits of a number by taking from user input
 public class sumOfDigits {
     public static void main(String[] args) {
         Scanner input =new Scanner(System.in);
@@ -23,7 +23,7 @@ public class sumOfDigits {
         }
         // Printing line for summation
         System.out.println("The summation is : first digit+second digit+third digit");
-        // showing the original out
+        // showing the original output
         System.out.println(sum);
 
     }
