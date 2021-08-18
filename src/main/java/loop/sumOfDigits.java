@@ -21,8 +21,7 @@ public class sumOfDigits {
             temp=temp/10 ;
 
         }
-        // Printing line for summation
-        System.out.println("The summation is : first digit+second digit+third digit");
+
         // showing the original output
         System.out.println(sum);
 
