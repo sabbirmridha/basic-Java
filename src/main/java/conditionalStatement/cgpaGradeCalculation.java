@@ -4,53 +4,41 @@ import java.util.Scanner;
 public class cgpaGradeCalculation {
     public static void main(String[] args) {
 
-        Scanner input=new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
 
-
-
-        for(int i=0;i<4;i++) {
-            System.out.println("Enter your marks for 4 subjects  to know your grade between 50 to 100: -");
-
+        double gpa = 0, total_gpa = 0;
+        for (int i = 1; i <= 4; i++) {
+            System.out.println("Input subject " + i + " marks: ");
             int marks = input.nextInt();
-
-
-            //conditions for grade calculation:
-
-
-            if (marks >= 94 && marks < 101) {
-                System.out.println("A+ : 4");
-            } else if (marks >= 90 && marks < 94) {
-                System.out.println("A : 3.75 ");
-            } else if (marks >= 86 && marks < 90) {
-                System.out.println("A- :3.5");
-            } else if (marks >= 82 && marks < 86) {
-                System.out.println("B+ :3.25");
-            } else if (marks >= 78 && marks < 82) {
-                System.out.println("B :3");
-            } else if (marks >= 74 && marks < 78) {
-                System.out.println("B- :2.75");
-            } else if (marks >= 70 && marks < 74) {
-                System.out.println("C+ :2.5");
-            } else if (marks >= 66 && marks < 70) {
-                System.out.println("C :2.25");
-            } else if (marks >= 62 && marks < 66) {
-                System.out.println("C :2");
-            } else if (marks >= 58 && marks < 62) {
-                System.out.println("D+ :1.75");
-            } else if (marks >= 54 && marks < 58) {
-                System.out.println("D :1.5");
+            if (marks >= 80 && marks <= 100) {
+                gpa = 4.0;
+            } else if (marks >= 75 && marks < 80) {
+                gpa = 3.75;
+            } else if (marks >= 70 && marks < 75) {
+                gpa = 3.50;
+            } else if (marks >= 65 && marks < 70) {
+                gpa = 3.25;
+            } else if (marks >= 60 && marks < 65) {
+                gpa = 3.00;
+            } else if (marks >= 55 && marks < 60) {
+                gpa = 2.75;
+            } else if (marks >= 50 && marks < 55) {
+                gpa = 2.50;
+            } else if (marks >= 40 && marks < 50) {
+                gpa = 2.25;
+            } else {
+                gpa = 0.00;
             }
-            else if(marks >= 50 && marks < 54) {
-                System.out.println("D- :1");
+            total_gpa += gpa;
+        }
 
-            }
-            else {
-                System.out.println("F : 0.00");
-
-            }
+        System.out.println("Your CGPA IS= " + total_gpa / 4);
 
 
-            System.out.println("Your grade is:" + marks);
+    }
+
+
+
 
 
         }
@@ -61,5 +49,4 @@ public class cgpaGradeCalculation {
 
 
 
-    }
-}
+
